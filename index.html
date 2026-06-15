@@ -8,12 +8,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+
   <header class="header-section">
     <div class="header-inner">
       <div class="logo">
-    <img src="images/download.png" alt="Company Logo" class="company-logo">
-</div>
-      <nav class="navbar">
+        <img src="images/download-removebg-preview.png" alt="Company Logo" class="company-logo">
+      </div>
+      
+      <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+      <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      
+      <nav class="navbar" id="navbar">
         <ul class="nav-menu">
           <li><a href="#hero" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
@@ -25,42 +34,50 @@
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
   <section class="hero-section" id="hero">
     <div class="hero-bg-shape"></div>
-    <div class="hero-content">
+    <div class="hero-bg-shape hero-bg-shape--2"></div>
+    <div class="hero-content animate-on-scroll">
       <p class="hero-eyebrow">Trusted by 500+ Companies Worldwide</p>
       <h1 class="hero-title">We Build Systems<br />That <span class="hero-accent">Scale With You</span></h1>
       <p class="hero-description">Nexora delivers end-to-end digital transformation — from strategy and design to engineering and analytics — so your business grows without limits.</p>
       <div class="hero-actions">
-        <a href="#services" class="btn btn-primary">Explore Our Services</a>
+        <a href="#services" class="btn btn-primary">
+          <span>Explore Our Services</span>
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
         <a href="#about" class="btn btn-ghost">Learn More</a>
       </div>
     </div>
-    <div class="hero-visual">
+    <div class="hero-visual animate-on-scroll animate-delay-1">
       <div class="hero-card hero-card--1">
         <div class="hcard-icon">📈</div>
-        <div class="hcard-label">Revenue Growth</div>
-        <div class="hcard-value">+147%</div>
+        <div class="hcard-text">
+          <div class="hcard-label">Revenue Growth</div>
+          <div class="hcard-value">+147%</div>
+        </div>
       </div>
       <div class="hero-card hero-card--2">
-        <div class="hcard-icon">🌐</div>
-        <div class="hcard-label">Global Clients</div>
-        <div class="hcard-value">500+</div>
+        <div class="hcard-icon">🌍</div>
+        <div class="hcard-text">
+          <div class="hcard-label">Global Clients</div>
+          <div class="hcard-value">500+</div>
+        </div>
       </div>
       <div class="hero-card hero-card--3">
-        <div class="hcard-icon">⚡</div>
-        <div class="hcard-label">Projects Delivered</div>
-        <div class="hcard-value">1,200+</div>
+        <div class="hcard-icon">💼</div>
+        <div class="hcard-text">
+          <div class="hcard-label">Projects Delivered</div>
+          <div class="hcard-value">1,200+</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
   <section class="about-section" id="about">
     <div class="section-container">
       <div class="about-content">
-        <div class="about-text">
+        <div class="about-text animate-on-scroll">
           <p class="section-eyebrow">Who We Are</p>
           <h2 class="section-title">A Partner Built<br />For Long-Term Growth</h2>
           <p class="about-body">Founded in 2014, Nexora has helped businesses across 30+ countries redesign their operations, upgrade their technology, and discover data-driven paths to growth. We combine the rigor of a consulting firm with the agility of a product studio.</p>
@@ -80,8 +97,12 @@
               </div>
             </div>
           </div>
+          <a href="#contact" class="btn btn-primary about-cta">
+            <span>Work With Us</span>
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
-        <div class="about-stats">
+        <div class="about-stats animate-on-scroll animate-delay-1">
           <div class="stat-item">
             <span class="stat-number">10+</span>
             <span class="stat-label">Years of Experience</span>
@@ -103,196 +124,190 @@
     </div>
   </section>
 
-  <!-- ===== SERVICES ===== -->
   <section class="services-section" id="services">
     <div class="section-container">
-      <div class="section-header">
+      <div class="section-header animate-on-scroll">
         <p class="section-eyebrow">What We Do</p>
         <h2 class="section-title">Services Designed to<br />Move Businesses Forward</h2>
         <p class="section-subtitle">Every engagement is tailored, every solution is built to last.</p>
       </div>
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card animate-on-scroll">
           <div class="service-card-icon">🧠</div>
           <h3 class="service-card-title">Digital Strategy</h3>
           <p class="service-card-desc">We map your competitive landscape, identify growth levers, and produce a clear digital roadmap that aligns your team and technology investments with long-term business goals.</p>
-          <span class="service-card-tag">Strategy</span>
+          <a href="#contact" class="service-card-link">
+            <span class="service-card-tag">Strategy</span>
+            <svg class="link-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
-        <div class="service-card service-card--highlight">
+        <div class="service-card service-card--highlight animate-on-scroll animate-delay-1">
           <div class="service-card-icon">💻</div>
           <h3 class="service-card-title">Product Engineering</h3>
           <p class="service-card-desc">From concept to deployment, our engineers build robust, scalable web and mobile products — using modern frameworks, cloud-native architecture, and continuous delivery pipelines.</p>
-          <span class="service-card-tag">Engineering</span>
+          <a href="#contact" class="service-card-link">
+            <span class="service-card-tag">Engineering</span>
+            <svg class="link-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
-        <div class="service-card">
+        <div class="service-card animate-on-scroll animate-delay-2">
           <div class="service-card-icon">📊</div>
           <h3 class="service-card-title">Data & Analytics</h3>
           <p class="service-card-desc">Turn raw data into competitive advantage. We design data pipelines, build BI dashboards, and implement machine learning models that inform smarter decisions across your organization.</p>
-          <span class="service-card-tag">Analytics</span>
+          <a href="#contact" class="service-card-link">
+            <span class="service-card-tag">Analytics</span>
+            <svg class="link-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
-        <div class="service-card">
+        <div class="service-card animate-on-scroll">
           <div class="service-card-icon">🎨</div>
           <h3 class="service-card-title">UX & Brand Design</h3>
-          <p class="service-card-desc">First impressions are decisions. Our design team crafts intuitive user experiences and cohesive brand identities that build trust, reduce churn, and make your product unforgettable.</p>
-          <span class="service-card-tag">Design</span>
+          <p class="service-card-desc">Beautiful interfaces mean nothing without seamless usability. We map intuitive digital experiences and sculpt strong identities that deepen interaction and customer retention.</p>
+          <a href="#contact" class="service-card-link">
+            <span class="service-card-tag">Design</span>
+            <svg class="link-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
-        <div class="service-card">
+        <div class="service-card animate-on-scroll animate-delay-1">
           <div class="service-card-icon">☁️</div>
           <h3 class="service-card-title">Cloud Infrastructure</h3>
-          <p class="service-card-desc">Migrate, modernize, and manage. We architect and operate cloud environments on AWS, GCP, and Azure — with security, observability, and cost-efficiency built in from day one.</p>
-          <span class="service-card-tag">Infrastructure</span>
+          <p class="service-card-desc">Optimize availability and overheads. We design zero-downtime AWS/Azure architectures, migrate legacy databases, and automate container orchestration via Kubernetes.</p>
+          <a href="#contact" class="service-card-link">
+            <span class="service-card-tag">Infrastructure</span>
+            <svg class="link-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
-        <div class="service-card">
-          <div class="service-card-icon">🔒</div>
+        <div class="service-card animate-on-scroll animate-delay-2">
+          <div class="service-card-icon">🛡️</div>
           <h3 class="service-card-title">Cybersecurity</h3>
-          <p class="service-card-desc">Protect what you've built. Our security experts conduct audits, implement zero-trust frameworks, and provide ongoing monitoring to keep your systems and customer data safe.</p>
-          <span class="service-card-tag">Security</span>
+          <p class="service-card-desc">Protect what you've built. Our security experts conduct audits, implement zero-trust frameworks, and configure real-time protection to safeguard data security.</p>
+          <a href="#contact" class="service-card-link">
+            <span class="service-card-tag">Security</span>
+            <svg class="link-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHY CHOOSE US ===== -->
-  <section class="choose-us-section" id="why">
+  <section class="choose-us-section">
     <div class="section-container">
-      <div class="section-header">
-        <p class="section-eyebrow">Why Nexora</p>
-        <h2 class="section-title">The Difference Is<br />In How We Work</h2>
+      <div class="section-header animate-on-scroll">
+        <p class="section-eyebrow">Why Choose Nexora</p>
+        <h2 class="section-title">Built for Performance,<br />Trusted for Partnership</h2>
       </div>
       <div class="choose-us-grid">
-        <div class="choose-card">
-          <div class="choose-icon">🎯</div>
-          <h3 class="choose-title">Outcome-Focused</h3>
-          <p class="choose-text">We measure success by your results — revenue, retention, velocity — not by hours billed or deliverables submitted. Every engagement has defined goals before the first line of code is written.</p>
+        <div class="choose-card animate-on-scroll">
+          <div class="choose-icon">⚡</div>
+          <h3 class="choose-title">Rapid Innovation</h3>
+          <p class="choose-text">Our pre-built accelerators, agile workflows, and veteran engineers mean rapid turnaround times — without sacrificing clean code, architecture, or security systems.</p>
         </div>
-        <div class="choose-card">
-          <div class="choose-icon">🤝</div>
-          <h3 class="choose-title">Embedded Partnership</h3>
-          <p class="choose-text">We don't hand off a report and leave. Our teams integrate with yours, share Slack channels, attend standups, and stay accountable through every phase of the project lifecycle.</p>
-        </div>
-        <div class="choose-card">
-          <div class="choose-icon">🚀</div>
-          <h3 class="choose-title">Speed Without Shortcuts</h3>
-          <p class="choose-text">Agile workflows, pre-built accelerators, and experienced engineers mean faster timelines — without sacrificing code quality, security, or architectural soundness.</p>
-        </div>
-        <div class="choose-card">
-          <div class="choose-icon">🌍</div>
+        <div class="choose-card animate-on-scroll animate-delay-3">
+          <div class="choose-icon">🌐</div>
           <h3 class="choose-title">Global Perspective</h3>
-          <p class="choose-text">With clients across 30+ countries, we bring cross-industry insights and cultural context to every engagement — so your solution is built for your real market, not a generic one.</p>
+          <p class="choose-text">With clients across 30+ countries, we bring multi-industry insights and cultural balance to every deployment — ensuring your platform fits your true localized target audience.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
   <section class="contact-section" id="contact">
     <div class="section-container">
-      <div class="contact-inner">
-        <div class="contact-info">
+      <div class="contact-grid">
+        <div class="contact-info animate-on-scroll">
           <p class="section-eyebrow">Get In Touch</p>
-          <h2 class="section-title contact-title">Let's Start a<br />Conversation</h2>
-          <p class="contact-intro">Whether you have a project in mind or just want to explore what's possible — we'd love to hear from you.</p>
+          <h2 class="section-title">Let's Create<br />Something Lasting</h2>
+          <p class="contact-desc">Ready to scale up your systems? Drop us a brief description of your current project requirements and an engineering lead will reach out within one business day.</p>
           <div class="contact-details">
-            <div class="contact-item">
-              <div class="contact-item-icon">📞</div>
-              <div class="contact-item-body">
-                <span class="contact-item-label">Phone</span>
-                <a href="tel:+14155550199" class="contact-item-value">+1 (415) 555-0199</a>
-              </div>
-            </div>
             <div class="contact-item">
               <div class="contact-item-icon">✉️</div>
               <div class="contact-item-body">
-                <span class="contact-item-label">Email</span>
+                <span class="contact-item-label">Email Us</span>
                 <a href="mailto:hello@nexora.io" class="contact-item-value">hello@nexora.io</a>
               </div>
             </div>
             <div class="contact-item">
-              <div class="contact-item-icon">📍</div>
+              <div class="contact-item-icon">📞</div>
               <div class="contact-item-body">
-                <span class="contact-item-label">Address</span>
-                <span class="contact-item-value">340 Pine Street, Suite 800<br />San Francisco, CA 94104</span>
+                <span class="contact-item-label">Call Us</span>
+                <span class="contact-item-value">+1 (555) 019-2834</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="contact-form-wrap">
-          <form class="contact-form">
+        <div class="contact-form-wrap animate-on-scroll animate-delay-1">
+          <form class="contact-form" action="#" method="POST">
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="fname">First Name</label>
-                <input type="text" id="fname" class="form-input" placeholder="Jane" />
+                <input type="text" id="fname" class="form-input" placeholder="Jane" required />
               </div>
               <div class="form-group">
                 <label class="form-label" for="lname">Last Name</label>
-                <input type="text" id="lname" class="form-input" placeholder="Smith" />
+                <input type="text" id="lname" class="form-input" placeholder="Doe" required />
               </div>
             </div>
             <div class="form-group">
-              <label class="form-label" for="email">Email Address</label>
-              <input type="email" id="email" class="form-input" placeholder="jane@company.com" />
+              <label class="form-label" for="email">Business Email</label>
+              <input type="email" id="email" class="form-input" placeholder="jane@company.com" required />
             </div>
             <div class="form-group">
-              <label class="form-label" for="message">Message</label>
-              <textarea id="message" class="form-input form-textarea" placeholder="Tell us about your project..."></textarea>
+              <label class="form-label" for="message">Project Details</label>
+              <textarea id="message" class="form-input form-textarea" placeholder="Tell us about your architectural or growth plans..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Send Message</span>
+            </button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SOCIAL MEDIA ===== -->
   <section class="social-section">
     <div class="section-container">
       <div class="social-inner">
-        <p class="social-tagline">Follow our journey — behind-the-scenes, insights, and updates.</p>
+        <p class="social-tagline">Stay interconnected across social networks for regular ecosystem updates.</p>
         <div class="social-buttons">
-          <a href="https://www.instagram.com/aa_qadeer" target="_blank" rel="noopener noreferrer" class="social-btn instagram-btn">
-            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-            </svg>
-            Instagram
+          <a href="https://www.linkedin.com/in/abdul-qadeer-b9776b2b5" target="_blank" rel="noopener noreferrer" class="social-btn linkedin-btn">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LinkedIn</span>
           </a>
-          <a href="https://www.facebook.com/Aqeel bhai" target="_blank" rel="noopener noreferrer" class="social-btn facebook-btn">
-            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-            </svg>
-            Facebook
+          <a href="https://github.com/qadeer-07" target="_blank" rel="noopener noreferrer" class="social-btn github-btn">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.instagram.com/aa_qadeer" target="_blank" rel="noopener noreferrer" class="social-btn instagram-btn">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span>Instagram</span>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
   <footer class="footer-section">
     <div class="section-container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <div class="logo footer-logo">
-        <div class="logo">
-    <img src="images/download.png" alt="Company Logo" class="company-logo">
-            
-          </div>
-          <p class="footer-tagline">Intelligent solutions for a digital-first world.</p>
+          <div class="footer-logo">startup
+    <img src="images/download-removebg-preview.png" alt="Startup Logo" class="footer-logo-img">
+  </div>
+          <p class="footer-tagline">Architecting future-proof digital assets across global parameters.</p>
         </div>
         <div class="footer-links">
-          <div class="footer-col">
-            <h4 class="footer-col-title">Company</h4>
-            <ul class="footer-link-list">
-              <li><a href="#about" class="footer-link">About Us</a></li>
+          <div class="footer-link-group">
+            <h4 class="footer-link-title">Navigation</h4>
+            <ul class="footer-links-list">
+              <li><a href="#hero" class="footer-link">Home</a></li>
+              <li><a href="#about" class="footer-link">About</a></li>
               <li><a href="#services" class="footer-link">Services</a></li>
-              <li><a href="#why" class="footer-link">Why Startup</a></li>
               <li><a href="#contact" class="footer-link">Contact</a></li>
             </ul>
           </div>
-          <div class="footer-col">
-            <h4 class="footer-col-title">Connect</h4>
-            <ul class="footer-link-list">
+          <div class="footer-link-group">
+            <h4 class="footer-link-title">Connect</h4>
+            <ul class="footer-links-list">
               <li><a href="https://www.instagram.com/yourcompany" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a></li>
               <li><a href="https://www.facebook.com/yourcompany" target="_blank" rel="noopener noreferrer" class="footer-link">Facebook</a></li>
               <li><a href="mailto:hello@nexora.io" class="footer-link">Email Us</a></li>
@@ -301,8 +316,11 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2025 Startup Inc. All rights reserved.</p>
-        <p class="footer-legal">Privacy Policy &nbsp;·&nbsp; Terms of Service</p>
+        <p class="footer-copy">&copy; 2026 Nexora. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>
