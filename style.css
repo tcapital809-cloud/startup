@@ -624,19 +624,24 @@ img {
 }
 /* This triggers when the mouse pointer moves over the box */
 .service-card:hover {
-  transform: scale(1.03); /* Zooms the box in by 3% */
+  background-color:  lightsteelblue; /* Changes the card background to pure black */
+  border-color: #334155;     /* Optional: slightly brightens the border so the black box pops */
   
-  /* Optional: Makes the purple glow slightly brighter/larger on hover for a "lifting" effect */
-  box-shadow: 0 15px 35px rgba(91, 95, 239, 0.35); 
-  
-  /* Optional: Changes the cursor to a pointer finger so users know it's clickable */
-  cursor: pointer; 
+  /* Keeps your zoom and shadow effects from before */
+  transform: scale(1.08); 
+  box-shadow: 0 20px 40px rgba(91, 95, 239, 0.4); 
+  cursor: pointer;
 }
-/* changee thiss */
+
 .service-card--highlight {
-  background: linear-gradient(135deg, white 100%, white 100%);
-  border-color: white;
-  box-shadow: 0 12px 32px white;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 16px;
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s, border-color 0.3s;
 }
 
 .service-card--highlight:hover {
@@ -646,8 +651,13 @@ img {
 
 .service-card--highlight .service-card-title { color: black; }
 .service-card--highlight .service-card-desc  { color: black(255, 255, 255, 0.8); }
-.service-card--highlight .service-card-tag   { background-color: rgba(255, 255, 255, 0.2); color: #ffffff; }
-.service-card--highlight .link-arrow         { color: #ffffff; }
+.service-card--highlight .service-card-tag   {    font-size: 0.78rem;
+    font-weight: 600;
+    background-color: rgb(243, 244, 246);
+    color: rgb(75, 85, 99);
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px; }
+.service-card--highlight .link-arrow         { color: blue; }
 
 .service-card-icon {
   font-size: 2.25rem;
@@ -681,7 +691,7 @@ img {
 }
 
 .service-card--highlight .service-card-link {
-  border-top-color: rgba(255, 255, 255, 0.1);
+  border-top-color: black(255, 255, 255, 0.1);
 }
 
 .service-card-tag {
