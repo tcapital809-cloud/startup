@@ -994,6 +994,8 @@ a.contact-item-value:hover {
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
+  width: 80px;
+  height: auto;
 }
 
 .footer-tagline {
