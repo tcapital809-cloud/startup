@@ -366,7 +366,6 @@ img {
   align-items: center;    /* Centers elements horizontally */
   text-align: center;     /* Centers all text lines */
 }
-
 .hero-eyebrow {
   display: inline-block;
   font-size: 0.78rem;
@@ -474,18 +473,19 @@ img {
 }
 
 .hcard-label {
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: #6B7280;
+    font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  font-weight: 800;
+  color:#0D0F1A;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .hcard-value {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.75rem;
+  font-family: 'Times New Roman', serif;
+  font-size: 40px;
   font-weight: 800;
-  color: #0D0F1A;
+  color: green;
   line-height: 1;
   margin-top: 0.15rem;
 }
