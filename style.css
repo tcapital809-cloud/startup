@@ -408,25 +408,43 @@ img {
 
 .hero-title {
   font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(36px, 5vw, 70px);
+  
+  /* 💡 Added a slightly smaller mobile size so it fits better on narrow screens */
+  font-size: clamp(1.4rem, 3.3vw, 4.2rem); 
+  
   font-weight: 800;
-  line-height: 1.1;
-  padding-bottom: 8px;
+  line-height: 1.2; 
   color: #0D0F1A;
-  margin-bottom: 24px;
-  animation: fadeSlideDown 0.7s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
 
+   max-width: 800px;
+  white-space: nowrap; 
+}
+.hero-container {
+  display: flex;          
+  flex-direction: column; 
+  align-items: center;    
+  width: max-content;     
+  margin-top: 0.4rem;     
+  font-weight: 800;
+   max-width: 800px;
+  white-space: normal; 
+}
 .hero-accent { color: #5B5FEF; display: inline-block; }
 .hero-text   { color: #5B5FEF; }
 
 .hero-description {
-  font-size: 17px;
+  font-size: 1.05rem;
   color: #6B7280;
   line-height: 1.75;
   max-width: 44ch;
-  margin-bottom: 36px;
+  margin-bottom: 2.25rem;
   animation: fadeSlideDown 0.7s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  /* 🎯 THE FIX: Breaks the inheritance and forces the text to wrap normally */
+  white-space: normal; 
 }
 
 .hero-actions {
@@ -1090,13 +1108,27 @@ a.contact-item-value:hover { color: #5B5FEF; }
 
 @media (max-width: 768px) {
   /* Hamburger menu */
+  
   .hamburger { display: flex; }
  .header-cta {
-  display: block;
-  order: 3;
+ .nav-cta-item {
+  display: none;
+}
+
+/* Inside @media (max-width: 768px) */
+.header-inner {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header-cta {
+  display: none;   /* hide the desktop button on mobile */
+}
+
+.nav-cta-item {
+  display: block;  /* show button inside hamburger menu */
   width: 100%;
-  margin-top: 8px;
-  text-align: left;
+}
 }
 
   .navbar {
