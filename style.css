@@ -623,14 +623,25 @@ img {
               border-color 0.3s ease;
 }
 /* This triggers when the mouse pointer moves over the box */
+/* 1. Turns the box black and keeps the zoom */
 .service-card:hover {
-  background-color:  lightsteelblue; /* Changes the card background to pure black */
-  border-color: #334155;     /* Optional: slightly brightens the border so the black box pops */
+  background-color: #000000; /* Box becomes black */
+  border-color: #222222;     /* Darkens the border to match */
   
-  /* Keeps your zoom and shadow effects from before */
+  /* Zoom and shadow effects */
   transform: scale(1.08); 
   box-shadow: 0 20px 40px rgba(91, 95, 239, 0.4); 
   cursor: pointer;
+}
+
+/* 2. Turns the description text to pure white when the box is hovered */
+.service-card:hover .service-card-desc {
+  color: #FFFFFF; /* Changes from gray to bright white */
+}
+
+/* 3. Ensures the title stays bright white */
+.service-card:hover .service-card-title {
+  color: #FFFFFF;
 }
 
 .service-card--highlight {
