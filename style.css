@@ -319,14 +319,19 @@ img {
 .hero-section {
   position: relative;
   overflow: hidden;
-  padding: 6rem 2rem 5rem;
+  
+
+  padding: 2.5rem 2rem 2.5rem; 
+  
   max-width: 1180px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 4rem;
-  min-height: calc(100vh - 68px);
+  
+  /* 2. REMOVED MIN-HEIGHT: Allows the box to cleanly wrap tightly around its content */
+  min-height: auto; 
 }
 
 .hero-bg-shape {
