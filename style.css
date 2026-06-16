@@ -82,7 +82,7 @@ img {
 .section-title {
 
   font-family: 'Times New Roman', Times, serif;
-  font-size: 70px;
+ font-size: clamp(2rem, 4.5vw, 4.375rem);
   font-weight: 600;
   line-height: 1; /* Increased from 1.15 to give loops and descenders room */
   padding-bottom: 10px; /* Safe padding barrier so the letters never clip */
@@ -368,8 +368,10 @@ img {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;    /* Centers elements horizontally */
-  text-align: center;     /* Centers all text lines */
+  align-items: flex-start;
+   text-align: left;  
+     /* Centers elements horizontally */
+    /* Centers all text lines */
 }
 .hero-eyebrow {
   display: inline-block;
@@ -389,9 +391,9 @@ img {
 
 .hero-title {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 70px;
+ font-size: clamp(2.25rem, 5vw, 4.375rem);
   font-weight: 800;
-  line-height: 1; /* Increased from 1.15 to give loops and descenders room */
+  line-height: 1.1; /* Increased from 1.15 to give loops and descenders room */
   padding-bottom: 0.15em; /* Safe padding barrier so the letters never clip */
   color: #0D0F1A;
   margin-bottom: 1.5rem;
@@ -444,8 +446,10 @@ img {
 .hero-actions {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  width: 100%;
   animation: fadeSlideDown 0.7s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
