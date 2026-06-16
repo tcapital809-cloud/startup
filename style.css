@@ -458,24 +458,25 @@ img {
 }
 
 .hero-card {
-  background: #ffffff;
+  background: skyblue;
   border: 1px solid #E5E7EB;
   border-radius: 16px;
   padding: 1.4rem 1.75rem;
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  width: 70%;
 }
 
 .hero-card:hover {
   transform: translateY(-5px) scale(1.01);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.1);
 }
-
+.hero-card--1 { margin-left: 2rem; }
 .hero-card--2 { margin-left: 2rem; }
-.hero-card--3 { margin-left: 1rem; }
+.hero-card--3 { margin-left: 2rem; }
 
 .hcard-icon {
   font-size: 2rem;
@@ -484,7 +485,7 @@ img {
 
 .hcard-label {
     font-family: 'Times New Roman', Times, serif;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 800;
   color:#0D0F1A;
   text-transform: uppercase;
@@ -1058,7 +1059,7 @@ a.contact-item-value:hover {
     width: 100%;
     margin-left: 0;
   }
-  
+  .hero-card--1 { margin-left: 0; }
   .hero-card--2 { margin-left: 0; }
   .hero-card--3 { margin-left: 0; }
   
