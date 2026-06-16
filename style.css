@@ -393,10 +393,20 @@ img {
   animation: fadeSlideDown 0.7s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.hero-container {
+  display: inline-flex;
+  flex-direction: column; /* Stacks the text vertically */
+  align-items: center;    /* Centers "You" directly under "Scale With" */
+  text-align: center;
+}
+
 .hero-accent {
   color: #5B5FEF;
-  position: relative;
   display: inline-block;
+  /* position: relative; optional now, depends if you have animations */
+}
+.hero-text{
+   color: #5B5FEF;
 }
 
 /* .hero-accent::after {
